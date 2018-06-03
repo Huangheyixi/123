@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_EasyLayout.cshtml";
+}
+
+<h2>Index</h2>
+<input id="btn" type="button" value="show" />
+<script type="text/javascript">
+    $('#btn').click(function () {
+        $.post("/Test/Show", {}, function (data) {
+            
+        })
+    })
+</script>

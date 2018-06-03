@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Content/jquery-easyui-1.5.5.1/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/jquery-easyui-1.5.5.1/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/jquery-easyui-1.5.5.1/demo/demo.css" />
+    <script type="text/javascript" src="/Content/jquery-easyui-1.5.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/jquery-easyui-1.5.5.1/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <!--------------------------------------window---------------------------------------->
+    <!--<div class="easyui-window" data-options="iconCls:'icon-save',modal:true,title:'save'" style="width:300px;height:400px">
+        Window Content
+    </div>-->
+    <!--<div id="newWin"></div>
+    <input id="btn" type="button" value="center" />
+    <script type="text/javascript">
+        $('#newWin').window({
+            width: 600,
+            height: 400,
+            modal: false
+        })
+        $('#btn').click(function () {
+            $('#newWin').window('center');
+        })
+    </script>-->
+    <!--------------------------------------dialog---------------------------------------->
+    <!--<div class="easyui-dialog" id="dd" style="width:400px;height:300px" data-options="iconCls:'icon-save',resizable:true,modal:true">Dialog content</div>
+    <script type="text/javascript">
+        $('#dd').dialog({
+            buttons: [{
+                text: "Save",
+                iconCls: 'icon-save',
+                handler: function () {
+                    //alert('button事件');
+                    $.messager.alert('错误', 'Save事件', 'info');
+                }
+            }, {
+                text: "Cancel",
+                iconCls: 'icon-cancel',
+                handler: function () {
+                    //alert('cancel事件');
+                    $.messager.alert('取消', 'Cancel事件', 'warning');
+                }
+            }]
+        })
+    </script>-->
+    <!-----------------------------------textbox----------------------------------------------->
+    <!--<input class="easyui-textbox" id="txt" iconWidth="28" style="padding:10px" /><input id="getUsername" type="button" style="margin:0 10px" value="获取Username值"><br />
+    <script type="text/javascript">
+        $('#txt').textbox({
+            // buttonText: "用户名",
+            iconCls: "icon-man",
+        });
+        $('#getUsername').click(function () {
+            $.messager.alert('取值', $('#txt').textbox('getValue'), "info");
+        });
+    </script>-->
+    <!----------------------------------password------------------------------------------>
+    <!--<input id="psd" class="easyui-passwordbox" prompt="Password" iconWidth="28" style="padding:10px" /><input id="getPassword" type="button" style="margin:0 10px" value="获取Password值" />
+    <script type="text/javascript">
+        $('#psd').passwordbox({
+            //可见标志是否显示
+            showEye: false
+        });
+        alert('');
+        $('#getPassword').click(function () {
+            $.messager.alert('取值', $('#psd').textbox('getValue'), "info");
+        })
+    </script>-->
+    <!----------------------------------datagrid------------------------------------------------->
+    <table id="data" class="easyui-datagrid" data-options="singleSelect:true">
+        <thead>
+            <tr>
+                <th data-options="field:'code'">Code</th>
+                <th data-options="field:'name',width:200">Name</th>
+                <th data-options="field:'price'">Price</th>
+            </tr>
+        </thead>
+    </table>
+    <input type="button" id="btn2" value="取值ID" />
+    <script type="text/javascript">
+        $('#data').datagrid({
+            fitColumns:true,
+            data: [
+                { 'code': '001', name: 111, price: 12.1, id: 12 },
+                { "code": '002', name: "双13", price: 15, id: 17 }
+            ]
+        });
+        //$('#btn2').click(function () {
+        //    alert($('#data').datagrid('getSelections')[0].id);
+        //})
+    </script>
+</body>
+</html>
