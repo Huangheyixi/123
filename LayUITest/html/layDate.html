@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+</head>
+<body>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">日期选择</label>
+            <div class="layui-input-inline">
+                <input class="layui-input" type="text" id="date" />
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.use(["laydate"], function () {
+            var laydate = layui.laydate;
+            var $ = layui.$;
+            var ins1 = laydate.render({
+                elem: "#date"//指定元素
+                // ,type:"year|month|date|time|datetime"//年|月|日期|时间|时间日期  选择
+                //, range: true  //range:"~"  //选择时间分隔符
+                //, format:"yyyy-MM-dd"  //更多格式参阅文档
+                //, value: "2018-03-10" //必须与format格式相符
+                //, isInitValue: true  //是否初始化填充value的值，需要和value配合使用
+                //min|max  //设定时间有效期范围
+                //,showButtom  //是否显示底部栏
+                //,btns:["clear","confirm"]
+                //,theme:"grid|molv"  //显示风格
+                //, calendar: true//显示公历重要节日，默认为false
+                , done: function (value, date, endDate) {//选择完时间时触发
+                    //ins1.hint("11"); //在控件上弹出value值,但是没有试出效果
+                }
+            })
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+</head>
+<body>
+    <fieldset class="layui-elem-field">
+        <legend>msg弹出框</legend>
+        <div>
+            <input class="layui-btn" type="button" id="open0" value="type0弹出层" />
+            <input class="layui-btn" type="button" id="open1" value="type1弹出层" />
+            <input class="layui-btn" type="button" id="open2" value="type2弹出层" />
+            <input class="layui-btn" type="button" id="open3" value="type3弹出层" />
+            <input class="layui-btn" type="button" id="open4" value="type4弹出层" />
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>title属性test</legend>
+        <div>
+            <input class="layui-btn layui-btn-normal" id="title1" type="button" value="title1弹出" />
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>skin属性</legend>
+        <div>
+            <input type="button" class="layui-btn layui-btn-radius layui-btn-danger" value="skin1" id="skin1" />
+            <input type="button" class="layui-btn layui-bg-orange" value="skin2" id="skin2" />
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>icon属性</legend>
+        <div>
+            <input type="button" class="layui-btn" value="icon0 alert弹出" id="icon0" />
+            <input type="button" class="layui-btn" value="icon1 alert弹出" id="icon1" />
+            <input type="button" class="layui-btn" value="icon2 alert弹出" id="icon2" />
+            <input type="button" class="layui-btn" value="icon3 alert弹出" id="icon3" />
+            <input type="button" class="layui-btn" value="icon4 alert弹出" id="icon4" />
+            <input type="button" class="layui-btn" value="icon5 alert弹出" id="icon5" />
+            <input type="button" class="layui-btn" value="icon6 alert弹出" id="icon6" />
+            <br />
+            <input type="button" class="layui-btn" value="icon msg弹出" id="msg1" />
+            <input type="button" class="layui-btn" value="icon load0弹出" id="load0" />
+            <input type="button" class="layui-btn" value="icon load1弹出" id="load1" />
+            <input type="button" class="layui-btn" value="icon load2弹出" id="load2" />
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>btn属性</legend>
+        <div>
+            <input type="button" class="layui-btn layui-bg-orange" value="多个按钮的弹出层" id="btn1" />
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field">
+        <legend>输入层</legend>
+        <div>
+            <input type="button" class="layui-btn" value="获得弹出层的输入值" id="prompt1" /> 
+        </div>
+    </fieldset>
+
+    <!--Html END-->
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.use(["layer"], function () {
+            var layer = layui.layer;
+            var $ = layui.$;
+
+            //type
+            $("#open0").click(function () {
+                layer.open({
+                    type: 0,
+                    content: "我是type0类型弹出层"
+                });
+            })
+            $("#open1").click(function () {
+                layer.open({
+                    type: 1,
+                    content: "我是type1类型弹出层"
+                });
+            })
+            $("#open2").click(function () {
+                layer.open({
+                    type: 2,
+                    content: "http://www.baidu.com"
+                    //,content:["http://www.baidu.com","no"]  //iframe不出现滚动条
+                });
+            })
+            $("#open3").click(function () {
+                layer.open({
+                    type: 3,
+                    content: "我是type3类型弹出层"
+                });
+            })
+            $("#open4").click(function () {
+                layer.open({
+                    type: 4,
+                    content: ['内容', '#id'] //数组第二项即吸附元素选择器或者DOM
+                });
+            })
+
+            //title
+            $("#title1").click(function () {
+                layer.open({
+                    type: 0,
+                    //title: ["文本", "font-size:28px"],
+                    title: false //关闭标题
+                    , content: "任意内容"
+                })
+            })
+
+            //skin
+            $("#skin1").click(function () {
+                layer.open({
+                    type: 0,
+                    skin: "layui-layer-lan"
+                });
+            })
+            $("#skin2").click(function () {
+                layer.open({
+                    type: 0,
+                    skin: "layui-layer-molv"
+                })
+            })
+
+            //icon
+            $("#icon0").click(function () {
+                layer.alert('酷毙了', { icon: 0 })
+            })
+            $("#icon1").click(function () {
+                layer.alert('酷毙了', { icon: 1 })
+            })
+            $("#icon2").click(function () {
+                layer.alert('酷毙了', { icon: 2 })
+            })
+            $("#icon3").click(function () {
+                layer.alert('酷毙了', { icon: 3 })
+            })
+            $("#icon4").click(function () {
+                layer.alert('酷毙了', { icon: 4 })
+            })
+            $("#icon5").click(function () {
+                layer.alert('酷毙了', { icon: 5 })
+            })
+            $("#icon6").click(function () {
+                layer.alert('酷毙了', { icon: 6 })
+            })
+            $("#msg1").click(function () {
+                layer.msg("不开心", { icon: 5 });
+            })
+            $("#load0").click(function () {
+                layer.load(0);
+            })
+            $("#load1").click(function () {
+                layer.load(1);
+            })
+            $("#load2").click(function () {
+                layer.load(2);
+            })
+
+            //btn属性
+            $("#btn1").click(function () {
+                layer.confirm("纳尼？",{//除第一个按钮外，其他所有按钮事件都会使弹出层关闭
+                    btn: ["按钮一", "按钮二", "按钮三"],
+                    //closeBtn:1|2  //表示两种不同的关闭按钮风格，默认为1
+                    //closeBtn:0  //关闭按钮不显示
+                    //time:5000  //表示自动关闭延迟时间为5秒
+                    //anim:[0-6],  //表示不同的动画风格,-1表示禁用动画
+                    btn3: function () {
+                        alert("按钮三事件");
+                    }
+                }, function () {
+                    alert("按钮一事件");
+                }, function () {
+                    alert("按钮二事件");
+                })
+            })
+
+            //prompt属性
+            $("#prompt1").click(function () {
+                layer.prompt(function (value, index, elem) {
+                    alert(value);
+                    layer.close(index);
+                })
+            })
+
+            //layer.photos() //相册层
+           //layer.tab()  //选项卡层
+        })
+    </script>
+</body>
+</html>

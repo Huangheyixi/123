@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+</head>
+<body>
+    <div style="width:200px;height:200px;display:inline-block;" class="layui-bg-black"></div>
+
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.use(["layer"], function () {
+            var $ = layui.$;
+            var anim = layui.anim;
+
+            $("div")[0].onclick=function () {
+                this.classList.add("layui-anim-up");
+                anim.render();
+            }
+        })
+    </script>
+</body>
+</html>
