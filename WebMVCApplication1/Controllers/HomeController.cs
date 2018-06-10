@@ -26,5 +26,10 @@ namespace WebMVCApplication1.Controllers
 
 			return View();
 		}
+
+		public ActionResult Error()
+		{
+			return RedirectToAction(nameof(About), "Home");
+		}
 	}
 }

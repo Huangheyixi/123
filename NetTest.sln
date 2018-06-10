@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayUITest", "LayUITest\LayU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCApplication1", "WebMVCApplication1\WebMVCApplication1.csproj", "{09C5CFE5-D3D8-4F7F-8822-B047CF253F03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayuiAndMvc", "LayuiAndMvc\LayuiAndMvc.csproj", "{FD242C86-71C8-448A-8E52-DFCE3F564495}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{09C5CFE5-D3D8-4F7F-8822-B047CF253F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C5CFE5-D3D8-4F7F-8822-B047CF253F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C5CFE5-D3D8-4F7F-8822-B047CF253F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD242C86-71C8-448A-8E52-DFCE3F564495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD242C86-71C8-448A-8E52-DFCE3F564495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD242C86-71C8-448A-8E52-DFCE3F564495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD242C86-71C8-448A-8E52-DFCE3F564495}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

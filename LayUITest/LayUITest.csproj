@@ -83,6 +83,8 @@
     <Content Include="html\anim.html" />
     <Content Include="html\layDate.html" />
     <Content Include="html\layer.html" />
+    <Content Include="html\layer2.html" />
+    <Content Include="html\layer3.html" />
     <Content Include="html\后台布局.html" />
     <Content Include="html\导航菜单.html" />
     <Content Include="html\表单元素.html" />

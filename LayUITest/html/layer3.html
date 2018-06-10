@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+</head>
+<body>
+    <div class="layui-container">
+        <button class="layui-btn" id="btn">弹出层按钮</button>
+    </div>
+
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.use("layer", function () {
+            var layer = layui.layer;
+            var $ = layui.$;
+
+            //layer.ready(function () {//layer初始化完成时回调
+            //    layer.msg("很高兴一开场就看见你");
+            //});
+
+            $("#btn").click(function () {
+                //layer.config();//全局配置
+                //layer.alert("只想简单的提示");//弹出提示框
+                //layer.alert("只想简单的提示", { icon: 1 }, function (index, layero) { layer.close(index) })//弹出框+参数+yes回调
+                //layer.confirm(content, options, yes, cancel);//询问框
+                //layer.msg(content, options, end);//零用户操作的提示
+                //layer.load(1);//加载层，可选值[0-2]
+                //layer.tips(content, follow, options);tip提示层
+                //layer.close(index);//关闭弹出层
+                //layer.closeAll();//关闭所有弹出层
+                //layer.style(index, cssStyle);//定义弹出层样式
+                //layer.title(title, index);//改变弹出层标题
+                //layer.getChildFrame(selector, index);//获得iframe页的DOM元素
+                //layer.formpt(options,yes);//输入层
+                //formpt参数：
+                    //formType: [0 - 2]: 文本、密码、多行文本
+                        //value:初始参数
+                        //title:标题
+                        //maxLenght:最大字数
+                    //yes回调：function(value,index,ele)
+                        //value:参数值
+                        //index:弹出层Index
+                //layer.tab({//标签
+                //    tab: [
+                //        { title: 'TAB1', content: '内容一' }
+                //        , { title: 'TAB2', content: "内容二" }
+                //    ]
+                //});
+                //layer.photos();//相册层，详情见官网
+            })
+        })
+    </script>
+</body>
+</html>

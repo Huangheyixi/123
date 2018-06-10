@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+</head>
+<body>
+    <div class="layui-container">
+        <button id="btn" class="layui-btn">弹出层</button>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.use("layer", function () {
+            var layer = layui.layer;
+            var $ = layui.$;
+
+            $("#btn").click(function () {
+                layer.open({
+                    type: 1,
+                    content: "我是弹出层提示哦~",
+                    //time: 3000,//控制弹出层自动关闭延时时间（毫秒）
+                    id: "msg1",//用于唯一标示号，不管什么类型的弹出层，同一ID都只允许弹出一个，可用于iframe层或页面层
+                    anim: 4,//动画效果，可选值[0-6]，分别为平滑放大、从上掉落、从底部往上滑入、从左滑入、从左翻滚、渐显、抖动
+                        //设置为-1，不显示动画效果
+                    isOutAnim: true,//关闭提示层时的过渡动画，false为不显示
+                    maxmin: true,//是否显示最大化最小化窗口
+                        //只对type：1|2 有效，即内容层和iframe层
+                    //fixed: false,//当鼠标滚动时是否固定在可视区域
+                    resize: true,//是否可以对弹出层调整大小
+                    //resizing: function () { alert('resizing') },//调整大小时回调函数
+                    scrollbar: false,//是否允许浏览器出现滚动条,默认为false
+                    maxWidth: 360,//最大宽度；只有width设置为auto时才有效
+                    maxHeight:250,//最大高度
+                    //zIndex://用于解决和其他组件层叠冲突。
+                    //move://类型：string/DOM/Boolean,如果想单独定义，只想元素的选择器或者DOM即可，如：move:'mine-move'
+                    //moveOut:true//是否允许拖拽出窗口区域外
+                    //moveEnd://function,移动结束时，回调函数
+                    //tip://[1-4]分别设定上、右、下、左弹出方向；[1,"#c00"]设置弹出提示颜色
+                    tipsMore: false,//是否允许同时存在多个tip提示框
+                    //success: //function,弹出框成功弹出的回调方法
+                    //yes://function,确定按钮回调函数
+                    //cancel://function,右上角关闭按钮回调
+                    //end://function,销毁后回调
+                    //full/min/restore :分别代表最大化、最小化、还原 后触发的回调
+
+                })
+            })
+        })
+
+    </script>
+</body>
+</html>
